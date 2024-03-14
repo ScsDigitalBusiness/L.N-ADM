@@ -19,42 +19,46 @@
 
     <title>Dashboard</title>
   </head>
-  <body>
+  <body> 
+    <!--SPINNER DE LOADING DA PAGINA -->
     <div id="spiner-area" class="spiner-area">
       <span class="loader"></span>
-    </div>
-    <main class="content">
+    </div> 
+    <!--MAIN DA DASH-->
+    <main class="content"> 
+     <!--header-->
       <header class="cabecalho">
-        <div class="notification-area">
-          <div class="notification-img">
+        <div class="notification_area">
+          <div class="notification__area__img">
             <img src="assets/utilites/notifications-icon]].svg" alt="" />
           </div>
-          <div class="notification-text">Notificações</div>
-          <div class="number-of-notifications">4</div>
+          <div class="notification__area__text">Notificações</div>
+          <div class="notification__area__number-of-notifications">4</div>
         </div>
 
         <div class="user-dados">
-          <div class="user-name">
-            <p class="Username">Olá, <span class="nameUser"></span></p>
+          <div class="userdados__user__name">
+            <p class="userdados__Username">Olá, <span class="userdados--nameUser"></span></p>
           </div>
           <a href="setings-page/index.html"
             ><img
               id="user-foto"
-              class="user-foto"
+              class="userdados--user--foto"
               src="assets/utilites/user.png"
               alt=""
           /></a>
         </div>
-      </header>
+      </header> 
+      <!--slidebar-->
       <div class="slidebar">
-        <div class="logo">
+        <div class="slidebar__logo">
           <img src="assets/utilites/logo.svg" alt="" />
         </div>
-        <ul class="links-bar">
+        <ul class="slidebar__links-bar">
           <li>
             <a href="dash.html"
               ><img
-                class="home-img"
+                class="linksbar__dash-img"
                 src="assets/utilites/dash-icon-selected.svg"
                 alt=""
             /></a>
@@ -62,7 +66,7 @@
           <li>
             <a href="pages/Colaborators-page/index.html"
             ><img
-            class="lead-icon"
+            class="linksbar__colaborators-img"
             src="assets/utilites/lead-icon-svg.svg"
             alt=""
             /></a>
@@ -70,7 +74,7 @@
           <li>
             <a href="pages/materials-page/index.html"
               ><img
-                class="lead-icon"
+                class="linksbar__materials-img"
                 src="assets/utilites/sidebar-material.svg"
                 alt="leads"
             /></a>
@@ -78,52 +82,53 @@
           <li id="sentings">
             <a href="pages/development-page/development.html">
               <img
-                class="senting-img"
+                class="linksbar__sentings-img"
                 src="assets/utilites/settings.svg"
                 alt=""
               />
             </a>
           </li>
         </ul>
-      </div>
+      </div> 
+      <!--DASH-BOARD INFOS--> 
       <main class="dash">
         <div class="geral-view">
-          <div class="total-leads">
-            <div class="text-total-lead">
-              <p class="total-lead-title">Total de Leads Cadastradas</p>
-              <div class="button-view-all go-leads">
+          <div class="geral-view__total__leads">
+            <div class="total__leads__text">
+              <p class="total__lead__title">Total de Leads Cadastradas</p>
+              <div class="total__lead__button go-leads">
                 <img src="assets/utilites/view-all-icon.svg" alt="" />
               </div>
             </div>
-            <h3 id="leads-count">0</h3>
+            <h3 id="leads-count"class = "total__leads--count" >0</h3>
           </div>
 
-          <div class="total-view">
-            <div class="text-total-view">
-              <p class="total-view-p">Telefones Cadastrados</p>
-              <div class="button-view-all-type-2 go-leads">
+          <div class="geral__view__total__view">
+            <div class="total__view__text">
+              <p class="total__view__title">Telefones Cadastrados</p>
+              <div class="total__view__button-2 go-leads">
                 <img src="assets/utilites/view-all-icon.svg" alt="" />
               </div>
             </div>
-            <h3 id="today-count" class="count">0</h3>
+            <h3 id="today-count" class="total__view--count">0</h3>
           </div>
-          <div class="total-view">
-            <div class="text-total-view">
-              <p class="total-view-p">E-mails Cadastrados</p>
-              <div class="button-view-all-type-2 go-leads">
+          <div class="geral__view__total__view">
+            <div class="total__view__text">
+              <p class="total__view__title">E-mails Cadastrados</p>
+              <div class="total__view__button-2 go-leads">
                 <img src="assets/utilites/view-all-icon.svg" alt="" />
               </div>
             </div>
-            <h3 id="count-month" class="count">0</h3>
+            <h3 id="count-month" class="total__view--count">0</h3>
           </div>
         </div>
         <section class="grafico-area">
-          <div class="grafico-line">
+          <div class="grafico-area__grafico__line">
             <canvas id="line"> </canvas>
           </div>
-          <div class="grafico-bar"><canvas id="bar"> </canvas></div>
-          <div class="grafico-more"><canvas id="donout"></canvas></div>
-          <div class="grafico-polar"><canvas id="polar"></canvas></div>
+          <div class="grafico-area__grafico__bar"><canvas id="bar"> </canvas></div>
+          <div class="grafico-area__grafico__more"><canvas id="donout"></canvas></div>
+          <div class="grafico-area__grafico__polar"><canvas id="polar"></canvas></div>
         </section>
       </main>
     </main>
