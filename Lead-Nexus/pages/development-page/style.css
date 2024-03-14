@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0; 
+    font-family: sans-serif; 
+    box-sizing: border-box;
+} 
+.content {
+     
+    height: 100vh; 
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column; 
+   gap: 2vh; 
+
+} 
+ 
+.content__title { 
+    font-size: 3em; 
+    color: rgb(77, 77, 77);
+    
+} .content__p {  
+    white-space: 2vh;
+    font-size: 1.5em;
+    color: gray; 
+
+} 
+.content  img {
+    height:50vh; 
+}

@@ -1,0 +1,50 @@
+{
+    "dados" : [ 
+        
+        {
+         "nome": "Recicláveis no Geral"   
+        },
+        {
+         "nome": "Sucata Ferrosa Pesada"   
+        },
+        {
+         "nome": "Sucata Ferrosa Mista"   
+        },
+        {
+         "nome": "Sucata Ferrosa Enfardada"   
+        },
+        {
+         "nome": "Sucata Ferrosa Graúda"   
+        },
+        {
+         "nome": "Sucata Ferrosa Oxi"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Bloco ou Duro)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Panela)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Cabo)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Roda)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Latinha)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Misto)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Perfil 1º)"   
+        },
+        {
+         "nome": "Sucata não Ferrosa(Alumínio Perfil 2º)"   
+        },
+        {
+         "nome": "Prensa"   
+        }
+    ]
+}

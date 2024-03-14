@@ -1,0 +1,196 @@
+.text {
+  color: black;
+  padding-bottom: 2vh;
+}
+.desfoque {
+  backdrop-filter: blur(10px);
+}
+.close {
+  height: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.close:hover {
+  background-color: red;
+  transition: 1s;
+}
+.close img {
+  height: 100%;
+}
+.close img:hover {
+  filter: invert(1);
+}
+.close2 {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.close2 img {
+  height: 100%;
+}
+.register-area { 
+  z-index: 3;
+  border: none;
+  color: white;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  position: absolute; 
+  
+  width: 100vw;
+  height: 100vh;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+.materials-category {
+  background: url(../utilites/bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  grid-area: categories;
+  height: 100%;
+  width: 50vw;
+  display: flex;
+  padding: 2vh;
+  align-items: start;
+  justify-content: start;
+  flex-direction: column;
+
+  gap: 2vh;
+}
+.materials {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2vh;
+  border-radius: 2vh;
+  background-color: rgba(0, 0, 0, 0.144);
+  gap: 1vh;
+  backdrop-filter: blur(10px);
+}
+.forms-area {
+  grid-area: form;
+  width: 50vw;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.register {
+  display: grid;
+  grid-template-areas:
+    "categories form"
+    "categories form ";
+  background-color: white; 
+  height: 100%;
+
+}
+.materials .material__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vh;
+  border: 0.4px solid white;
+  cursor: pointer;
+  color: white;
+  width: 20%;
+  border-radius: 2vh;
+  transition: 1.02s;
+  font-size: 0.5em;
+}
+.materials .material__card:hover {
+  background-color: white;
+  color: black;
+}
+.materials .plastic {
+  background-color: white;
+  color: black;
+}
+.title {
+  font-size: 5em;
+  color: white;
+  position: relative;
+  top: 30vh;
+  left: 5vh;
+}
+.title-form {
+  position: relative;
+  width: 50%;
+  gap: 2vh;
+  right: 7%;
+}
+
+.title-form h3 {
+  font-size: 2.5em;
+  color: black;
+}
+.title-form p {
+  color: gray;
+}
+.form-body {
+  width: 50vw;
+  padding-top: 10vh;
+  padding-bottom: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+
+.form-field {
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.form-body input {
+  padding: 2vh;
+  width: 30vw;
+  border-radius: 2vh;
+  border: none;
+  border: 0.5px solid gray;
+}
+.form-body input:focus {
+  outline: none;
+}
+.form-body button {
+  border: none;
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer;
+}
+.form-body button:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}

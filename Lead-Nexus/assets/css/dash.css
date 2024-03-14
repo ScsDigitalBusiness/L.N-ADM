@@ -1,0 +1,83 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Arimo", sans-serif;
+}
+.desfoque {
+  filter: blur(10px);
+}
+body {
+  overflow: hidden; 
+ 
+}
+.content {
+  z-index: 0;
+  display: grid;
+
+  height: 100vh;
+
+  grid-template-areas:
+    "slidebar header "
+    " slidebar dash ";
+
+  width: 100vw;
+} 
+.spiner-area {
+  background-color: white;
+  height: 100vh;
+  width: 100vw; 
+  position:fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  cursor: none;
+
+  z-index: 4;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: #01CBEC;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  background-color: #01CBEC;
+  border-radius: 50%;
+  animation: scale50 1s infinite ease-in-out;
+}
+.loader::before {
+  top: auto;
+  bottom: 0;
+  background-color: #E118E1;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes scale50 {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+} 

@@ -1,0 +1,151 @@
+.dash {
+  height: calc(100vh - 15vh);
+  grid-area: dash;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10vh;
+  width: calc(100vw - 7vw);
+  overflow-y: scroll;
+  background-color: white;
+}
+.area-leads {
+  border: none;
+  margin: 0;
+  width: 90vw;
+  outline: none;
+  border-collapse: collapse;
+  background-color: #eeeeee;
+  height: 10%;
+  border-radius: 2vh;
+}
+.area-leads thead {
+  background-color: back ;
+  border-radius: 2vh;
+}
+#border-radius-top-right {
+  border-top-right-radius: 2vh;
+}
+#border-radius-top-left {
+  border-top-left-radius: 2vh;
+}
+
+.area-leads th {
+  border-bottom: 1px solid #929292;
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 2vh; 
+  font-size: 1.3em;
+}
+.th-icons {
+  height: 3vh;
+}
+.area-leads td {
+  text-align: center;
+  padding: 0.7vh;
+  margin: 0;
+  border: none;
+  color: rgb(73, 73, 73); 
+  font-size: 1.2em;
+}
+#nome-lead {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  flex-direction: row;
+  gap: 3vh;
+}
+#nome-lead img {
+  height: 4.5vh;
+  filter: opacity(0.5);
+} 
+
+#new-Lead {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5vh;
+  clip-path: circle();
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+#new-Lead img {
+  height: 100%;
+}
+#new-Lead img:hover {
+  filter: grayscale(1);
+  transform: scale(1.05);
+}
+
+.lead-mail {
+  width: 30vw;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  font-size: 1.2em;
+}
+.lead-local-infos {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2vh;
+}
+.spiner-area {
+  background-color: white;
+  width: 100vw;
+  cursor: none;
+  height: 100vh;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+}
+.loader {
+  width: 48px;
+  height: 48px;
+  display: block;
+  margin:15px auto;
+  position: relative;
+  color: #01CBEC;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  background-color: #01CBEC;
+  border-radius: 50%;
+  animation: scale50 1s infinite ease-in-out;
+}
+.loader::before {
+  top: auto;
+  bottom: 0;
+  background-color: #E118E1;
+  animation-delay: 0.5s;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes scale50 {
+  0%, 100% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+} 

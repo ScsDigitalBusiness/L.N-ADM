@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Thiago Duarte Miranda Dias" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link
+      rel="shortcut icon"
+      href="../../assets/utilites/logo.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/sideBar.css" />
+    <link rel="stylesheet" href="assets/css/principal-area.css" />
+    <link rel="stylesheet" href="assets/css/register-area.css" />
+    <link rel="stylesheet" href="assets/css/animations.css" />
+    <link rel="stylesheet" href="assets/css/more-infos.css" />
+    <link rel="stylesheet" href="assets/css/search.css" />
+    <title>Colaborators</title>
+  </head>
+  <body>
+    <div id="spiner-area" class="spiner-area">
+      <span class="loader"></span>
+    </div>
+    <!-- REGISTER-AREA -->
+    <div class="register-area">
+      <div class="register"> 
+        <div class="close">
+          <img src="assets/utilites/close.svg" alt="fechar" />
+        </div>
+        <div class="materials-category">
+          
+          <div class="title">
+            <h2 id="material-title" >Novo Colaborador.</h2>
+          </div>
+        </div>
+        <div id= "forms-area" class="forms-area">
+          <div class="title-form">
+            <h3>Dados do Colaborador</h3>
+            <p>
+              Insira os dados cuidadosamente, caso tenha dúvidas, veja o vídeo
+              explicativo da base de conhecimento.
+            </p>
+          </div>
+          <div id="form-field" class="form-field">
+            <form
+             id = "myForm"
+              class="form-body"
+              action="https://api.sheetmonkey.io/form/exo1qrtfjcEKYUF1LNBKis"
+              method="POST"
+            >
+              <input type="text" placeholder="Nome do Colaborador" name="Nome" required />
+              <select name="Empresa" id="empresa"> 
+                <option value="disabled" disabled selected>Empresa</option>
+                <option value="Saulo Recicláveis">Saulo Recicláveis</option>
+                <option value="SCS Digital Business">SCS Digital Business</option>
+              </select>
+              <select name="Departamento" id="dep"> 
+                <option value="disabled" disabled selected>Departamento</option>
+                 <option value="Marketing">Marketing</option>
+                 <option value="T.I">T.I</option> 
+                 <option value="Finanças">Finanças</option>
+                 <option value="Diretoria">Diretoria</option> 
+                 <option value="Diretoria">Outro</option>
+                </select>
+              <button type="submit" class="button-register">Cadastrar</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="content" class="content">
+      <header class="cabecalho">
+        <div class="notification-area">
+          <div class="notification-img">
+            <img src="assets/utilites/notifications-icon]].svg" alt="" />
+          </div>
+          <div class="notification-text">Notificações</div>
+          <div class="number-of-notifications">4</div>
+        </div>
+        <div class="user-dados">
+          <div class="user-name">
+            <p class="Username">Olá, <span class="name-user"></span></p>
+          </div>
+          <a href="setings-page/index.html"
+            ><img
+              id="user-foto"
+              class="user-foto"
+              src="assets/utilites/user.png"
+              alt="user"
+          /></a>
+        </div>
+      </header>
+      <div class="slidebar">
+        <div class="logo">
+          <img src="../../assets/utilites/logo.svg" alt="LOGO" />
+        </div>
+        <ul class="links-bar">
+          <li>
+            <a href="../../dash.html"
+              ><img
+                class="home-img"
+                src="assets/utilites/apps-dash.svg"
+                alt="home"
+            /></a>
+          </li>
+          <li>
+            <a href="crm-page/crm.html"
+              ><img
+                class="crm-img"
+                src="assets/utilites/lead-icon-svg-select.svg"
+                alt=""
+            /></a>
+          </li> 
+          <li>
+            <button id="new-Lead">
+              <img src="assets/utilites/add-icon.svg" alt="" />
+            </button>
+          </li>
+          <li>
+            <a href="../materials-page/index.html"
+              ><img
+                class="lead-icon"
+                src="assets/utilites/sidebar-material.svg"
+                alt="leads"
+            /></a>
+          </li>
+          
+          <li id="sentings">
+            <a href="../development-page/development.html">
+              <img
+                class="senting-img"
+                src="assets/utilites/settings.svg"
+                alt="configurações"
+              />
+            </a>
+          </li>
+        </ul>
+      </div> 
+
+      <main class="dash">
+        <section class="leads-area">
+          <table class="area-leads" id="colaborators">
+            <tr id="lead-status">
+              <th id="border-radius-top-left">ID</th>
+              <th>Colaboradores</th> 
+              <th>Empresa</th> 
+              <th id="border-radius-top-right">Departamento</th>
+              </tr>
+          </table>
+          
+        </section>
+      </main>
+    </main>
+    <button id="new-Lead">
+      <img src="assets/utilites/create.svg" alt="criar" />
+    </button>
+    <div class="search">
+      <button id="button-search" class="button-seach">
+        <img src="assets/utilites/search.svg" alt="" />
+      </button>
+      <input
+        id="Search-bar"
+        placeholder="Pesquisar..."
+        type="search"
+        class="Barra-de-Pesquisa"
+      />
+    </div>
+    <!-- SCRIPTS-->
+    <script src="assets/js/Jquery/code.jquery.com_jquery-3.7.1.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"
+      integrity="sha512-0XDfGxFliYJPFrideYOoxdgNIvrwGTLnmK20xZbCAvPfLGQMzHUsaqZK8ZoH+luXGRxTrS46+Aq400nCnAT0/w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="module" src="../../modules/class/getAPIS-modules.js"></script>
+    <script type="module" src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+  </body>
+</html>

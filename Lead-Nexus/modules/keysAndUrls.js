@@ -1,0 +1,9 @@
+export const key = "lead-info";
+export const urlAPI = `https://script.google.com/macros/s/AKfycbylyhQEexT34WmNCABbiytpCNwHT9ueEIOQDGVuqi77Rq7yVnEIWNM99VJ7Z0mVQomY/exec`;
+export const URL_API_COLABORATORS = `https://script.google.com/macros/s/AKfycbxjv8K6fFuQ9tw7GJbWodleviJFSUnHgNAwz3xkxwjbT0XfuWeiXPvLDjGDIq0-0TvC/exec`;
+export const papelAPI = `https://script.google.com/macros/s/AKfycbwUI3tEaFj7OSJJ1hbh0dLP2s_VNvDMJhGCAQGauEu8eCcy81T8Zih2Fv0sqXCEdefIVw/exec`;
+export const metalAPI = `https://script.google.com/macros/s/AKfycbyfn_vKXeJNmpt2wAJqOM4DdN7UagVR7rRY8hhsU8VCi2bIGMSpSKTUiGCZdOkJrU8U/exec`; 
+export const vidroAPI = `https://script.google.com/macros/s/AKfycbzzPDiv4WZLE3Q7sJYIBOW7KtH--fpStvmz1sflA0V3GQUE7FZkqFOwKDWkpuYZorzc/exec`; 
+export const plasticoAPI = `https://script.google.com/macros/s/AKfycbyn2vg_0lA3XIsqH3qJCnwYmYjtif3FuP_H67EM7ylMlAwj5IwOjlQjuTHIY_7q8WFekw/exec`; 
+export const freteAPI = `https://script.google.com/macros/s/AKfycbwdY_GleuY90RWCJX6VFKUPIlwPWffQkFDQqyTFUZCB1YoGN-VLnjoK51CHPyVQGHNO/exec`
+export const infoProdutoAPI = `https://script.google.com/macros/s/AKfycbzndV9kMr3gB0TsafQy_7s1eqRUGTMeml45V_oQn1IXvxJtFg1U-FFvJr3d1KvWnUXk7w/exec`

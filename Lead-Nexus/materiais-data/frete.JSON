@@ -1,0 +1,20 @@
+{
+    "dados" : [
+        {
+         "nome": "Truck"    
+        },
+        {
+         "nome": "Bitruck"    
+        },
+        {
+         "nome": "Carreta"    
+        },
+        {
+         "nome": "Bitrem"    
+        },
+        {
+         "nome": "Rodotrem"    
+        }
+       
+    ]
+}
