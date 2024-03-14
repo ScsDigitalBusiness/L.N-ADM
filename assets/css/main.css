@@ -1,0 +1,221 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    
+  }
+  body {
+    overflow: hidden;
+  }
+  .principal-home {
+    display: grid;
+    grid-template-areas: "s1 s2";
+   
+  }
+  .section__1 {
+    grid-area: s1;
+    background: url(../utilites/bg.png ) 
+    
+    ; 
+
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    height: 100vh;
+    width: 55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .text__section1 {
+    grid-area: text;
+    color: white;
+    height: 60vh; 
+    width: 100%;
+    text-align: justify;
+    display: flex;
+    flex-direction: column;
+    align-items: start; 
+    padding: 10vh;
+    justify-content: center;
+     gap: 5vh;
+  }
+  .text__section1 button {
+    padding: 2vh;
+    width: 40%;
+    border-radius: 5vh;
+    border: 2px solid white;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2em;
+  }
+  .text__section1 h2 {
+    font-size:7em;
+  }
+  .text__section1 p {
+    font-size: 1.2em;
+    width: 70%;
+    text-align: center;
+  }
+  
+  .section__2 {
+    width: 45vw;
+    grid-area: s2;
+    background-color: #f7f7f7;
+    grid-template-areas:
+      "text_form text_form  "
+      "form form";
+  }
+  .text__Form {
+    grid: text_form;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3em;
+    text-align: center;
+    justify-content: end; 
+    padding-bottom: 6vh; 
+
+    height: 40vh;
+  } 
+  .text__Form h2 {
+      color: gray; 
+      font-size: 2em;
+  }
+  .form-area { 
+    
+    grid-area: form; 
+    
+  } 
+  .img-area{
+     
+     position: absolute; 
+     top:55vh; 
+     left: 22vw;
+  
+  }  
+  .img-area img {
+    height: 45vh;
+  }
+  
+  .form-area form {
+    display: flex;
+    height: 60vh;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    gap: 3vh;
+  }
+  .form-area form input {
+    width: 35vw;
+    padding: 2vh; 
+    background-color: #EAEEED; 
+    border: none; 
+    padding-left: 6vh;
+  } 
+  .form-area form input:focus {
+      outline: none;
+      border: none;
+  }
+  .form-area form button {
+    border: none;
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+  margin: 10px;
+  padding: 2vh 5vw;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  cursor: pointer; 
+  font-size: 1.2em;
+    }
+
+  
+    .form-area button:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #ffffff;
+    text-decoration: none;
+  }
+  
+  .input-area img {
+    height: 2.5vh; 
+    position: relative; 
+    left: 4.5vh;  
+    top: 15%; 
+    filter: opacity(0.5);
+    
+  } 
+   
+  .area-error-name, .area-error-email,.area-error-pass{
+     display: none;
+    width: 50%; 
+    color: red;
+    font-weight: bold;
+    
+  } 
+  
+  .spiner-area {
+    background-color: white;
+    width: 100vw;
+    cursor: none;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+  }
+  .loader {
+    width: 48px;
+    height: 48px;
+    display: block;
+    margin:15px auto;
+    position: relative;
+    color: #01CBEC;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+  }
+  .loader::after,
+  .loader::before {
+    content: '';  
+    box-sizing: border-box;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    top: 0;
+    background-color: #01CBEC;
+    border-radius: 50%;
+    animation: scale50 1s infinite ease-in-out;
+  }
+  .loader::before {
+    top: auto;
+    bottom: 0;
+    background-color: #E118E1;
+    animation-delay: 0.5s;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  } 
+  @keyframes scale50 {
+    0%, 100% {
+      transform: scale(0);
+    }
+    50% {
+      transform: scale(1);
+    }
+  } 
