@@ -1,25 +1,4 @@
-.slidebar__logo {
-  height: 10vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1vh;
-  position: relative;
-  bottom: 3%;
-} 
-
-.slidebar__logo img {
-  height: 100%;
-  clip-path: circle();
-}
-
-.slidebar__logo {
-  background-color: white;
-  clip-path: circle();
-}
-
-
-.slidebar {
+.sidebar {
   background-color: #fafafa;
   grid-area: slidebar;
   height: 100vh;
@@ -30,7 +9,30 @@
   width: 7vw;
   
 }
-.slidebar__links-bar {
+
+.sidebar__logo {
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1vh;
+  position: relative;
+  bottom: 3%;
+} 
+
+.sidebar__logo img {
+  height: 100%;
+  clip-path: circle();
+}
+
+.sidebar__logo {
+  background-color: white;
+  clip-path: circle();
+}
+
+
+
+.sidebar__links-bar {
   width: 100%;
   height: 80%;
   display: flex;
@@ -42,7 +44,7 @@
 
   list-style: none;
 }
-.slidebar__links-bar li img {
+.sidebar__links-bar li img {
   height: 3.5vh;
   cursor: pointer;
 }
