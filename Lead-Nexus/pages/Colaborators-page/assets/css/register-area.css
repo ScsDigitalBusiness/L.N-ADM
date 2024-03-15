@@ -5,40 +5,8 @@
 .desfoque {
   backdrop-filter: blur(10px);
 }
-.close {
-  height: 4%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-.close:hover {
-  background-color: red;
-  transition: 1s;
-}
-.close img {
-  height: 100%;
-}
-.close img:hover {
-  filter: invert(1);
-}
-.close2 {
-  height: 7%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  cursor: pointer;
-}
-.close2 img {
-  height: 100%;
-}
-.register-area { 
+
+.register__area { 
   z-index: 3;
   border: none;
   color: white;
@@ -52,7 +20,52 @@
   height: 100vh;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
-.materials-category {
+
+.register {
+  display: grid;
+  grid-template-areas:
+    "categories form"
+    "categories form ";
+  background-color: white; 
+  height: 100%;
+
+}
+
+.register__area__close {
+  height: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.register__area__close:hover {
+  background-color: red;
+  transition: 1s;
+}
+.register__area__close img {
+  height: 100%;
+}
+.register__area__close img:hover {
+  filter: invert(1);
+}
+/* .close2 {
+  height: 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+.close2 img {
+  height: 100%;
+} */
+
+.register__area__bg {
   background: url(../utilites/bg.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -68,19 +81,16 @@
 
   gap: 2vh;
 }
-.materials {
-  width: 99%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  padding: 2vh;
-  border-radius: 2vh;
-  background-color: rgba(0, 0, 0, 0.144);
-  gap: 1vh;
-  backdrop-filter: blur(10px);
+
+.register__area__bg__title {
+  font-size: 5em;
+  color: white;
+  position: relative;
+  top: 30vh;
+  left: 5vh;
 }
-.forms-area {
+
+.forms__area {
   grid-area: form;
   width: 50vw;
   background-color: white;
@@ -90,59 +100,24 @@
   justify-content: center;
   flex-direction: column;
 }
-.register {
-  display: grid;
-  grid-template-areas:
-    "categories form"
-    "categories form ";
-  background-color: white; 
-  height: 100%;
 
-}
-.materials .material__card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  padding: 1vh;
-  border: 0.4px solid white;
-  cursor: pointer;
-  color: white;
-  width: 20%;
-  border-radius: 2vh;
-  transition: 1.02s;
-  font-size: 0.5em;
-}
-.materials .material__card:hover {
-  background-color: white;
-  color: black;
-}
-.materials .plastic {
-  background-color: white;
-  color: black;
-}
-.title {
-  font-size: 5em;
-  color: white;
-  position: relative;
-  top: 30vh;
-  left: 5vh;
-}
-.title-form {
+
+
+.forms__area__title__form {
   position: relative;
   width: 50%;
   gap: 2vh;
   right: 7%;
 }
 
-.title-form h3 {
+.forms__area__title__form h3 {
   font-size: 2.5em;
   color: black;
 }
-.title-form p {
+.forms__area__title__form p {
   color: gray;
 }
-.form-body {
+.area__field__form {
   width: 50vw;
   padding-top: 10vh;
   padding-bottom: 10vh;
@@ -153,7 +128,7 @@
   gap: 2vh;
 }
 
-.form-field {
+.forms__area__field {
   
   display: flex;
   align-items: center;
@@ -196,3 +171,39 @@
   color: #fff;
   text-decoration: none;
 }
+
+/* .materials {
+  width: 99%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  padding: 2vh;
+  border-radius: 2vh;
+  background-color: rgba(0, 0, 0, 0.144);
+  gap: 1vh;
+  backdrop-filter: blur(10px);
+} */
+
+/* .materials .material__card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1vh;
+  border: 0.4px solid white;
+  cursor: pointer;
+  color: white;
+  width: 20%;
+  border-radius: 2vh;
+  transition: 1.02s;
+  font-size: 0.5em;
+}
+.materials .material__card:hover {
+  background-color: white;
+  color: black;
+}
+.materials .plastic {
+  background-color: white;
+  color: black;
+} */

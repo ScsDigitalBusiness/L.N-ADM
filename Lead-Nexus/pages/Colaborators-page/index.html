@@ -24,33 +24,33 @@
       <span class="loader"></span>
     </div>
     <!-- REGISTER-AREA -->
-    <div class="register-area">
+    <div class="register__area">
       <div class="register"> 
-        <div class="close">
+        <div class="register__area__close">
           <img src="assets/utilites/close.svg" alt="fechar" />
         </div>
-        <div class="materials-category">
+        <div class="register__area__bg">
           
-          <div class="title">
+          <div class="register__area__bg__title">
             <h2 id="material-title" >Novo Colaborador.</h2>
           </div>
         </div>
-        <div id= "forms-area" class="forms-area">
-          <div class="title-form">
+        <div id= "forms-area" class="forms__area">
+          <div class="forms__area__title__form">
             <h3>Dados do Colaborador</h3>
             <p>
               Insira os dados cuidadosamente, caso tenha dúvidas, veja o vídeo
               explicativo da base de conhecimento.
             </p>
           </div>
-          <div id="form-field" class="form-field">
+          <div id="form-field" class="forms__area__field">
             <form
              id = "myForm"
-              class="form-body"
+              class="area__field__form"
               action="https://api.sheetmonkey.io/form/exo1qrtfjcEKYUF1LNBKis"
               method="POST"
             >
-              <input type="text" placeholder="Nome do Colaborador" name="Nome" required />
+              <input type="text" placeholder="Nome do Colaborador" name="Nome" required class="field__form__body__input"/>
               <select name="Empresa" id="empresa"> 
                 <option value="disabled" disabled selected>Empresa</option>
                 <option value="Saulo Recicláveis">Saulo Recicláveis</option>
@@ -73,35 +73,35 @@
     <!--Area principal-->
     <main id="content" class="content">
       <header class="cabecalho">
-        <div class="notification-area">
-          <div class="notification-img">
+        <div class="notification_area">
+          <div class="notification__area__img">
             <img src="assets/utilites/notifications-icon]].svg" alt="" />
           </div>
-          <div class="notification-text">Notificações</div>
-          <div class="number-of-notifications">4</div>
+          <div class="notification__area__text">Notificações</div>
+          <div class="notification__area__number-of-notifications">4</div>
         </div>
         <div class="user-dados">
-          <div class="user-name">
-            <p class="Username">Olá, <span class="name-user"></span></p>
+          <div class="userdados__user__name">
+            <p class="userdados__Username">Olá, <span class="userdados--nameUser"></span></p>
           </div>
           <a href="setings-page/index.html"
             ><img
               id="user-foto"
-              class="user-foto"
+              class="userdados--user--foto"
               src="assets/utilites/user.png"
               alt="user"
           /></a>
         </div>
       </header>
-      <div class="slidebar">
-        <div class="logo">
+      <div class="sidebar">
+        <div class="sidebar__logo">
           <img src="../../assets/utilites/logo.svg" alt="LOGO" />
         </div>
-        <ul class="links-bar">
+        <ul class="sidebar__links-bar">
           <li>
             <a href="../../dash.html"
               ><img
-                class="home-img"
+                class="linksbar__dash-img"
                 src="assets/utilites/apps-dash.svg"
                 alt="home"
             /></a>
@@ -109,7 +109,7 @@
           <li>
             <a href="crm-page/crm.html"
               ><img
-                class="crm-img"
+                class="linksbar__colaborators-img"
                 src="assets/utilites/lead-icon-svg-select.svg"
                 alt=""
             /></a>
@@ -122,7 +122,7 @@
           <li>
             <a href="../materials-page/index.html"
               ><img
-                class="lead-icon"
+                class="linksbar__materials-img"
                 src="assets/utilites/sidebar-material.svg"
                 alt="leads"
             /></a>
@@ -131,7 +131,7 @@
           <li id="sentings">
             <a href="../development-page/development.html">
               <img
-                class="senting-img"
+                class="linksbar__sentings-img"
                 src="assets/utilites/settings.svg"
                 alt="configurações"
               />
