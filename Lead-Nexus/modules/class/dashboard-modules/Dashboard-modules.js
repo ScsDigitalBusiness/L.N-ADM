@@ -21,75 +21,6 @@ export class DashBoard {
     this.url = url;
     this.urlColaborators = urlColaborators;
   }
-
-  GetNumberOfRegister(db, Filter) {
-    let NumberOfRegister = db.filter((value) => value.person == Filter);
-    return NumberOfRegister.length;
-  }
-
-  barChart(db) {
-    let colaborators = [];
-    fetch(this.urlColaborators)
-      .then((response) => response.json())
-      .then((data) => {
-        let db = data.data;
-        console.log(data);
-        fetch(this.url)
-          .then((response) => response.json())
-          .then((output) => {
-            let systemPrincipalDB = output.output;
-            console.log(systemPrincipalDB);
-            for (let i in db) {
-              for (let j in systemPrincipalDB) {
-                if (db[j].nome == systemPrincipalDB[i]) {
-                  let register = GetNumberOfRegister(
-                    systemPrincipalDB,
-                    db[j].nome
-                  );
-                  colaborators.push(register);
-                }
-              }
-            }
-            return colaborators;
-          });
-      });
-
-    // for (let i in db) {
-
-    //   const ctx2 = document.getElementById("bar");
-    //   new Chart(ctx2, {
-    //     type: "bar",
-    //     data: {
-    //       labels: ["Yan", "Rafael", "Erlaine", "Enailiane"],
-
-    //       datasets: [
-    //         {
-    //           label: "Leads Cadastradas",
-    //           data: [segunda, terca, quarta, quinta, sexta],
-    //           borderWidth: 1,
-    //           backgroundColor: [
-    //             "#5EE95C",
-    //             "#5EE95C",
-    //             "#5EE95C",
-    //             "#5EE95C",
-    //             "#5EE95C",
-    //             "#5EE95C",
-    //             "#5EE95C",
-    //           ],
-    //           borderColor: "#5EE95C",
-    //         },
-    //       ],
-    //     },
-    //     options: {
-    //       scales: {
-    //         y: {
-    //           beginAtZero: true,
-    //         },
-    //       },
-    //     },
-    //   });
-    // }
-  }
 }
 
 DashBoard.prototype.totalLeadsIn = function (db) {
@@ -120,7 +51,7 @@ DashBoard.prototype.getNumberOf = function (data, key, verify) {
 
 
 
-DashBoard.prototype.showColab = function () {
+DashBoard.prototype.getColab = function () {
   let numberOfRegisterFor = [];
   let nameOfColabs = this.getValuesOf(this.urlColaborators);
   fetch(this.url)
@@ -162,11 +93,16 @@ DashBoard.prototype.getData = function () {
       this.totalOf(db, "email", this.MonthLeads);
       let result = this.getNumberOf(db, "person", "Rafael");
       let result2 = this.getValuesOf(this.urlColaborators);
-      let cl = this.showColab(db, result2, "person", this.getValuesOf);
+      let cl = this.getColab(db, result2, "person", this.getValuesOf);
       console.log(result2);
       console.log(result);
       console.log(cl);
-      let result3 = this.showColab();
-      console.log(result3);
-    });
+   });
 };
+
+ export class  MaterialOverview extends DashBoard { 
+   constructor (totalLead,todayLeads,MonthLeads,line, bar, donout, polar,url) {
+    super((totalLead,todayLeads,MonthLeads,line, bar,donout,polar));  
+      this.url = url; 
+   } 
+}   

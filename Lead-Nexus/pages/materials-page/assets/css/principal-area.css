@@ -1,4 +1,4 @@
-.dash {
+.principal-content {
   height: calc(100vh - 15vh);
   grid-area: dash;
   display: flex;
@@ -8,7 +8,7 @@
   overflow-y: scroll;
   background-color: white;
 }
-.area-leads {
+.area__table {
   border: none;
   margin: 0;
   width: 90vw;
@@ -18,7 +18,7 @@
   height: 10%;
   border-radius: 2vh;
 }
-.area-leads thead {
+.area__table thead {
   background-color: back ;
   border-radius: 2vh;
 }
@@ -29,7 +29,7 @@
   border-top-left-radius: 2vh;
 }
 
-.area-leads th {
+.area__table th {
   border-bottom: 1px solid #929292;
   background-color: black;
   color: white;
@@ -40,7 +40,7 @@
 .th-icons {
   height: 3vh;
 }
-.area-leads td {
+.area__table td {
   text-align: center;
   padding: 0.7vh;
   margin: 0;

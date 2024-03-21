@@ -1,4 +1,4 @@
-import { DashBoard } from "./Dashboard-modules"; 
+import { DashBoard } from "./class/dashboard-modules/Dashboard-modules"; 
 export class Colaborator {
     constructor(name, registers) {
         this.name = name;
