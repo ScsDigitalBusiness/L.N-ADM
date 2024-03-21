@@ -47,41 +47,23 @@ DashBoard.prototype.getNumberOf = function (data, key, verify) {
     }
   }
   return count;
-}; 
-
-
-
-DashBoard.prototype.getColab = function () {
-  let numberOfRegisterFor = [];
-  let nameOfColabs = this.getValuesOf(this.urlColaborators);
-  fetch(this.url)
-    .then((response) => response.json())
-    .then((data) => {
-      let db = data.output;
-
-      for (let i in nameOfColabs) {
-        numberOfRegisterFor.push(
-          this.getNumberOf(db, "person", nameOfColabs[i])
-        );
-      }
-    }); 
-
-  return numberOfRegisterFor;
 };
- 
-DashBoard.prototype.getValuesOf = function (url) {
+
+
+
+DashBoard.prototype.getValuesOf = function (url, key) {
   let myValues = [];
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
       let db = data.data;
       for (let values of db) {
-        myValues.push(values.nome);
+        myValues.push(values[`${key}`]);
       }
     });
-  return myValues;
-}; 
 
+  return myValues;
+};
 
 DashBoard.prototype.getData = function () {
   fetch(this.url)
@@ -91,18 +73,16 @@ DashBoard.prototype.getData = function () {
       this.totalLeadsIn(db);
       this.totalOf(db, "telefone", this.todayLeads);
       this.totalOf(db, "email", this.MonthLeads);
-      let result = this.getNumberOf(db, "person", "Rafael");
-      let result2 = this.getValuesOf(this.urlColaborators);
-      let cl = this.getColab(db, result2, "person", this.getValuesOf);
-      console.log(result2);
-      console.log(result);
-      console.log(cl);
-   });
+     });
 };
 
- export class  MaterialOverview extends DashBoard { 
-   constructor (totalLead,todayLeads,MonthLeads,line, bar, donout, polar,url) {
-    super((totalLead,todayLeads,MonthLeads,line, bar,donout,polar));  
-      this.url = url; 
-   } 
-}   
+DashBoard.prototype.colaboratorNumberOfRegister = function () {
+  let result = 0;
+  fetch(this.url)
+    .then((response) => response.json())
+    .then((data) => {
+      let myDb = data.output;
+      result = this.getNumberOf(myDb, "person", "Yan");
+    });
+  return result;
+};
