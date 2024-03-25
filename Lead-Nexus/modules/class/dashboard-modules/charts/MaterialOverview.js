@@ -1,21 +1,39 @@
-import { DashBoard } from "../Dashboard-modules"; 
+import { DashBoard } from "../Dashboard-modules.js";
 
-export class  MaterialOverview extends DashBoard { 
-    constructor (totalLead,todayLeads,MonthLeads,line, bar, donout, polar,url) {
-     super((totalLead,todayLeads,MonthLeads,line, bar,donout,polar));  
-       this.url = url; 
-    } 
- }    
+export class MaterialOverview extends DashBoard {
+  constructor(
+    totalLead,
+    todayLeads,
+    MonthLeads,
+    line,
+    bar,
+    donout,
+    polar,
+    url
+  ) {
+    super((totalLead, todayLeads, MonthLeads, line, bar, donout, polar));
+    this.url = url;
+  }
+} 
+
+MaterialOverview.prototype.getNumberWithKey = function (database, key, verify) {
+  let count = 0; 
   
-
- MaterialOverview.prototype.getNumberOf = function (key, verify) {
-   let count = 0; 
-   fetch(this.url).then((response) => response.json()).then((data)=>  { 
-      let db = data.output;   
-      console.log(db); 
-        
-    })
-   
-   return count;
- };
+    for (let objs of database) {
+      if (objs[key] == verify) {
+        count++;
+      }
+    } 
+    return count; 
+  };
  
+MaterialOverview.prototype.getNumberOf = function (key, verify) {
+   
+  let values = 0; 
+   fetch(this.url).then((response) => response.json()).then((data) => { 
+      let  database = data.output; 
+       values =   this.getNumberWithKey(database,key,verify); 
+      });
+   return values;
+}
+
