@@ -10,15 +10,11 @@ export class  MaterialOverview extends DashBoard {
 
  MaterialOverview.prototype.getNumberOf = function (key, verify) {
    let count = 0; 
-   fetch(this.url).then((response)=> response.json()).then((data)=>  { 
-      let db = data.output;  
+   fetch(this.url).then((response) => response.json()).then((data)=>  { 
+      let db = data.output;   
       console.log(db); 
-      for (let objs of db) { 
-         if (objs[key] == verify) {
-           count++;
-         }
-       }
-   })
+        
+    })
    
    return count;
  };
