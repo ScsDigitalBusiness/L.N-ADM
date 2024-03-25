@@ -76,13 +76,3 @@ DashBoard.prototype.getData = function () {
      });
 };
 
-DashBoard.prototype.colaboratorNumberOfRegister = function () {
-  let result = 0;
-  fetch(this.url)
-    .then((response) => response.json())
-    .then((data) => {
-      let myDb = data.output;
-      result = this.getNumberOf(myDb, "person", "Yan");
-    });
-  return result;
-};

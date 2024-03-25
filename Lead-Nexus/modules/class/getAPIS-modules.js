@@ -28,7 +28,7 @@ Table.prototype.showMaterial = function (el,url, key,category) {
 };
  
 
-Table.prototype.showColaborator= function (el,url, key1,key2,key3) {
+Table.prototype.showColaborator = function (el,url, key1,key2,key3) {
     fetch(url).then((response) => response.json()).then((data) => {
             let db = data.data;
             for (let i in db) {
