@@ -1,12 +1,12 @@
 
-export class Table {
+const _table = Symbol(); 
+export  class Table {
     constructor(table) {
-        this.table = document.getElementById(table);
-    }
-}
-
-Table.prototype.showMaterial = function (el,url, key,category) {
-    fetch(url).then((response) => response.json()).then((data) => {
+        this[_table] = document.getElementById(table);
+    }  
+    
+    showMaterial(el,url, key,category) {
+        fetch(url).then((response) => response.json()).then((data) => {
             let db = data.data;
             for (let i in db) {
                 document.getElementById(el).innerHTML +=
@@ -25,11 +25,10 @@ Table.prototype.showMaterial = function (el,url, key,category) {
                 }
             }
         });
-};
- 
+    }   
 
-Table.prototype.showColaborator = function (el,url, key1,key2,key3) {
-    fetch(url).then((response) => response.json()).then((data) => {
+    showColaborator(el,url, key1,key2,key3) {
+        fetch(url).then((response) => response.json()).then((data) => {
             let db = data.data;
             for (let i in db) {
                 document.getElementById(el).innerHTML +=
@@ -49,6 +48,11 @@ Table.prototype.showColaborator = function (el,url, key1,key2,key3) {
                 }
             }
         });
-};
+    }
+}
+
+
+ 
+
  
 

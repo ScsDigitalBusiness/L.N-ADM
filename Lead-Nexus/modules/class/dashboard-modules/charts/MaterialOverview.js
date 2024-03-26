@@ -1,6 +1,6 @@
 import { DashBoard } from "../Dashboard-modules.js";
 
-export class MaterialOverview extends DashBoard {
+export  class MaterialOverview extends DashBoard {
   constructor(
     totalLead,
     todayLeads,
@@ -13,11 +13,19 @@ export class MaterialOverview extends DashBoard {
   ) {
     super((totalLead, todayLeads, MonthLeads, line, bar, donout, polar));
     this.url = url;
+  }  
+  
+  getNumberOf(key, verify) {
+    let values = 0; 
+    fetch(this.url).then((response) => response.json()).then((data) => { 
+       let  database = data.output; 
+        values =   this.getNumberWithKey(database,key,verify); 
+       });
+    return values;
   }
-} 
 
-MaterialOverview.prototype.getNumberWithKey = function (database, key, verify) {
-  let count = 0; 
+  getNumberWithKey(database, key, verify) {
+    let count = 0; 
   
     for (let objs of database) {
       if (objs[key] == verify) {
@@ -25,15 +33,9 @@ MaterialOverview.prototype.getNumberWithKey = function (database, key, verify) {
       }
     } 
     return count; 
-  };
+  }
+} 
+
+
  
-MaterialOverview.prototype.getNumberOf = function (key, verify) {
-   
-  let values = 0; 
-   fetch(this.url).then((response) => response.json()).then((data) => { 
-      let  database = data.output; 
-       values =   this.getNumberWithKey(database,key,verify); 
-      });
-   return values;
-}
 

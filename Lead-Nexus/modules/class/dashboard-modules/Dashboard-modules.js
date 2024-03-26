@@ -1,5 +1,15 @@
-//
-export class DashBoard {
+// 
+const  _totalLead = Symbol();  
+const  _todayLeads = Symbol(); 
+const  _MonthLeads = Symbol();  
+const  _line = Symbol();  
+const _bar = Symbol(); 
+const _donout = Symbol();
+const _polar = Symbol();
+const _url = Symbol();
+
+export  class DashBoard { 
+  
   constructor(
     totalLead,
     todayLeads,
@@ -21,58 +31,52 @@ export class DashBoard {
     this.url = url;
     this.urlColaborators = urlColaborators;
   }
-}
 
-DashBoard.prototype.totalLeadsIn = function (db) {
-  this.totalLead.innerHTML = db.length;
-};
-
-DashBoard.prototype.totalOf = function (db, key, areaCount) {
-  let TotalOfCount = 0;
-  for (let i in db) {
-    if (db[i][key] !== "") {
-      TotalOfCount++;
-      areaCount.innerHTML = TotalOfCount;
-    } else {
-      TotalOfCount = TotalOfCount;
-    }
+  totalLeadsIn(db) {
+    this.totalLead.innerHTML = db.length;
+    
   }
-};
 
-DashBoard.prototype.getNumberOf = function (data, key, verify) {
-  let count = 0;
-  for (let objs of data) {
-    if (objs[key] == verify) {
-      count++;
-    }
-  }
-  return count;
-};
-
-
-
-DashBoard.prototype.getValuesOf = function (url, key) {
-  let myValues = [];
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
-      let db = data.data;
-      for (let values of db) {
-        myValues.push(values[`${key}`]);
+  totalOf(db, key, areaCount) {
+    let TotalOfCount = 0;
+    for (let i in db) {
+      if (db[i][key] !== "") {
+        TotalOfCount++;
+        areaCount.innerHTML = TotalOfCount;
+      } else {
+        TotalOfCount = TotalOfCount;
       }
-    });
+    }
+  }
 
-  return myValues;
-};
+  getNumberOf(data, key, verify) {
+    let count = 0;
+    for (let objs of data) {
+      if (objs[key] == verify) {
+        count++;
+      }
+    }
+    return count;
+  }
 
-DashBoard.prototype.getData = function () {
-  fetch(this.url)
-    .then((response) => response.json())
-    .then((data) => {
-      let db = data.output;
-      this.totalLeadsIn(db);
-      this.totalOf(db, "telefone", this.todayLeads);
-      this.totalOf(db, "email", this.MonthLeads);
-     });
-};
+  getValuesOf(url, key) {
+    let myValues = [];
+    fetch(url).then((response) => response.json()).then((data) => {
+        let db = data.data;
+        for (let values of db) {
+          myValues.push(values[`${key}`]);
+        }
+      });
 
+    return myValues;
+  }
+
+  getData() {
+    fetch(this.url).then((response) => response.json()).then((data) => {
+        let db = data.output;
+        this.totalLeadsIn(db);
+        this.totalOf(db, "telefone", this.todayLeads);
+        this.totalOf(db, "email", this.MonthLeads);
+      });
+  }
+}
