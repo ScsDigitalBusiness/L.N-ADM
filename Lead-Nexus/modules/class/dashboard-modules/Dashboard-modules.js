@@ -4,10 +4,6 @@ export class DashBoard {
   #totalLead
   #todayLeads
   #MonthLeads
-  #line
-  #bar
-  #donout
-  #polar
   #url
   #urlColaborators
   constructor(
@@ -16,10 +12,10 @@ export class DashBoard {
     this.#totalLead = document.getElementById(totalLead);
     this.#todayLeads = document.getElementById(todayLeads);
     this.#MonthLeads = document.getElementById(MonthLeads);
-    this.#line = document.getElementById(line);
-    this.#bar = document.getElementById(bar);
-    this.#donout = document.getElementById(donout);
-    this.#polar = document.getElementById(polar);
+    this.line = document.getElementById(line);
+    this.bar = document.getElementById(bar);
+    this.donout = document.getElementById(donout);
+    this.polar = document.getElementById(polar);
     this.#url = url;
     this.#urlColaborators = urlColaborators;
   }

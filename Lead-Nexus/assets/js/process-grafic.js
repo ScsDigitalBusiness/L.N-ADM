@@ -59,7 +59,7 @@ new Chart(ctx4, {
           countEnfardado,
           countSolto,
           countPrensado,
-          countNenhum,
+          countNenhumProcess,
         ],
         backgroundColor: [
           "#68F263",

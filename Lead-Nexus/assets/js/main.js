@@ -1,5 +1,6 @@
 import { DashBoard } from "../../modules/class/dashboard-modules/Dashboard-modules.js";
-import { MaterialOverview } from "../../modules/class/dashboard-modules/charts/MaterialOverview.js";
+import {MaterialOverview} from "../../modules/class/charts/MaterialOverview.js"; 
+  
 import { urlAPI, URL_API_COLABORATORS } from "../../modules/keysAndUrls.js";
 
 
@@ -12,11 +13,14 @@ let m1 = new MaterialOverview('leads-count', 'today-count', 'count-month', 'line
 
 
  m1.getNumberOf("Yan").then((count) =>  {
-    console.log(count)
+    console.log(count) ;       
+
  })
  .catch((err) => {
     console.error("error", err);
 }); 
+ 
+ 
 
 
  
