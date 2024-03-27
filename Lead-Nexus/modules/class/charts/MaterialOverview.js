@@ -19,8 +19,9 @@ export class MaterialOverview extends DashBoard {
 
 
   }
-  getBarChart() {
-    const ctx3 = this.bar; 
+  getBarChart() { 
+    console.log("atete"); 
+    const ctx3 = document.getElementById("bar"); 
 
     new Chart(ctx3, {
       type: "bar",
