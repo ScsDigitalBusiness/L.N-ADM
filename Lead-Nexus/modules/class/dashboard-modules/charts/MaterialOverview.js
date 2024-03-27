@@ -1,6 +1,8 @@
 import { DashBoard } from "../Dashboard-modules.js";
 
-export  class MaterialOverview extends DashBoard {
+export  class MaterialOverview extends DashBoard { 
+ 
+  #url
   constructor(
     totalLead,
     todayLeads,
@@ -12,7 +14,7 @@ export  class MaterialOverview extends DashBoard {
     url
   ) {
     super((totalLead, todayLeads, MonthLeads, line, bar, donout, polar));
-    this.url = url;
+    this.#url = url;
   }  
   
   getNumberOf(key, verify) {

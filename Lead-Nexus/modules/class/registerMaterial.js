@@ -10,7 +10,7 @@ export default class Forms {
     this.form = document.getElementById(form);
   }
   change(el, nameOfChange, elementsInDom) {
-   let elements = document.getElementsByClassName(elementsInDom);
+    let elements = document.getElementsByClassName(elementsInDom);
     for (let element of elements) {
       if (element.classList.contains(el)) {
         document.querySelector(`.${el}`).style.backgroundColor = "white";
@@ -24,7 +24,7 @@ export default class Forms {
 
     }
 
-  }; 
+  };
 
   changeFormElement(elToAdd, elToRemove) {
     document.getElementById(elToRemove).innerHTML = "";

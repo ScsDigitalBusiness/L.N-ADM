@@ -6,7 +6,8 @@ import {
   plasticoAPI,
   freteAPI,
   infoProdutoAPI,
-} from "../../../../modules/keysAndUrls.js";
+} from "../../../../modules/keysAndUrls.js"; 
+
 import { Forms } from "../../../../modules/class/registerMaterial.js";
 
 let table = new Table("area-leads");
