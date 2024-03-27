@@ -1,17 +1,17 @@
 // 
 
-export  class DashBoard { 
+export class DashBoard {
   #totalLead
   #todayLeads
- #MonthLeads
-    #line
-    #bar
-    #donout
-    #polar
-    #url
-    #urlColaborators
+  #MonthLeads
+  #line
+  #bar
+  #donout
+  #polar
+  #url
+  #urlColaborators
   constructor(
-    totalLead,todayLeads,MonthLeads,line,bar,donout,polar,url,urlColaborators
+    totalLead, todayLeads, MonthLeads, line, bar, donout, polar, url, urlColaborators
   ) {
     this.#totalLead = document.getElementById(totalLead);
     this.#todayLeads = document.getElementById(todayLeads);
@@ -26,7 +26,7 @@ export  class DashBoard {
 
   totalLeadsIn(db) {
     this.#totalLead.innerHTML = db.length;
-    
+
   }
 
   totalOf(db, key, areaCount) {
@@ -54,21 +54,21 @@ export  class DashBoard {
   getValuesOf(url, key) {
     let myValues = [];
     fetch(url).then((response) => response.json()).then((data) => {
-        let db = data.data;
-        for (let values of db) {
-          myValues.push(values[`${key}`]);
-        }
-      });
+      let db = data.data;
+      for (let values of db) {
+        myValues.push(values[`${key}`]);
+      }
+    });
 
     return myValues;
   }
 
- get getData() {
+  get getData() {
     fetch(this.#url).then((response) => response.json()).then((data) => {
-        let db = data.output;
-        this.totalLeadsIn(db);
-        this.totalOf(db, "telefone", this.#todayLeads);
-        this.totalOf(db, "email", this.#MonthLeads);
-      });
+      let db = data.output;
+      this.totalLeadsIn(db);
+      this.totalOf(db, "telefone", this.#todayLeads);
+      this.totalOf(db, "email", this.#MonthLeads);
+    });
   }
 }
