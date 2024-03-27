@@ -1,39 +1,31 @@
 // 
-const  _totalLead = Symbol();  
-const  _todayLeads = Symbol(); 
-const  _MonthLeads = Symbol();  
-const  _line = Symbol();  
-const _bar = Symbol(); 
-const _donout = Symbol();
-const _polar = Symbol();
-const _url = Symbol();
 
 export  class DashBoard { 
-  
+  #totalLead
+  #todayLeads
+ #MonthLeads
+    #line
+    #bar
+    #donout
+    #polar
+    #url
+    #urlColaborators
   constructor(
-    totalLead,
-    todayLeads,
-    MonthLeads,
-    line,
-    bar,
-    donout,
-    polar,
-    url,
-    urlColaborators
+    totalLead,todayLeads,MonthLeads,line,bar,donout,polar,url,urlColaborators
   ) {
-    this.totalLead = document.getElementById(totalLead);
-    this.todayLeads = document.getElementById(todayLeads);
-    this.MonthLeads = document.getElementById(MonthLeads);
-    this.line = document.getElementById(line);
-    this.bar = document.getElementById(bar);
-    this.donout = document.getElementById(donout);
-    this.polar = document.getElementById(polar);
-    this.url = url;
-    this.urlColaborators = urlColaborators;
+    this.#totalLead = document.getElementById(totalLead);
+    this.#todayLeads = document.getElementById(todayLeads);
+    this.#MonthLeads = document.getElementById(MonthLeads);
+    this.#line = document.getElementById(line);
+    this.#bar = document.getElementById(bar);
+    this.#donout = document.getElementById(donout);
+    this.#polar = document.getElementById(polar);
+    this.#url = url;
+    this.#urlColaborators = urlColaborators;
   }
 
   totalLeadsIn(db) {
-    this.totalLead.innerHTML = db.length;
+    this.#totalLead.innerHTML = db.length;
     
   }
 
@@ -71,12 +63,12 @@ export  class DashBoard {
     return myValues;
   }
 
-  getData() {
-    fetch(this.url).then((response) => response.json()).then((data) => {
+ get getData() {
+    fetch(this.#url).then((response) => response.json()).then((data) => {
         let db = data.output;
         this.totalLeadsIn(db);
-        this.totalOf(db, "telefone", this.todayLeads);
-        this.totalOf(db, "email", this.MonthLeads);
+        this.totalOf(db, "telefone", this.#todayLeads);
+        this.totalOf(db, "email", this.#MonthLeads);
       });
   }
 }
